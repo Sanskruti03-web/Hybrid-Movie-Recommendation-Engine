@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Hybrid Movie Recommender</h1>
+            <p>Interpretable AI-Powered Movie Discovery</p>
+        </header>
+
+        <section class="search-section">
+            <div class="input-group">
+                <input type="number" id="userIdInput" placeholder="Enter User ID (e.g., 1)" value="1">
+                <button id="analyzeBtn">Analyze User</button>
+            </div>
+            <div id="errorMsg" class="error hidden"></div>
+        </section>
+
+        <div id="resultsArea" class="hidden">
+            <section class="user-profile">
+                <h2>User Profile Context</h2>
+                <p class="section-desc">Based on highest rated movies</p>
+                <div class="movie-grid" id="historyGrid">
+                    <!-- Javascript will populate this -->
+                </div>
+            </section>
+
+            <section class="recommendations">
+                <h2>Top Hybrid Recommendations</h2>
+                <p class="section-desc">Blended Score: 50% Content (Genre Match) + 50% Collaborative (Similar Users)</p>
+                <div class="movie-grid" id="recsGrid">
+                    <!-- Javascript will populate this -->
+                </div>
+            </section>
+        </div>
+
+        <div id="loader" class="loader hidden"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
