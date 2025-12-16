@@ -1,67 +1,83 @@
-# Hybrid Movie Recommendation Engine
+# Hybrid Movie Recommendation Engine 🎬
 
-A personalized movie recommendation system demonstrating a **Hybrid Approach**: combining **Content-Based Filtering** (TF-IDF on Genres) and **Collaborative Filtering** (User-User similarity). Features an explainable AI dashboard.
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.0-green?style=for-the-badge&logo=flask&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
-## Features
+A powerful, transparent movie recommendation system that combines the best of **Content-Based Filtering** and **Collaborative Filtering**. Designed to not just predict what you'll like, but **explain why**.
 
-- **Hybrid Recommendation Algorithm**: Weights both content similarity (genres) and collaborative patterns (user behavior) for robust predictions.
-- **Explainable AI (XAI)**: The UI decomposes recommendations into "Content Score" vs. "Collaborative Score" to visualize *why* a movie was suggested.
-- **Scalable Architecture**: Built with Pandas and Scikit-Learn for efficient matrix computations.
-- **Interactive Dashboard**: Modern Flask-based web interface for exploring recommendations.
+## 📸 Dashboard Demo
 
-## Tech Stack
+![Dashboard Screenshot](file:///Users/tanishksarode/.gemini/antigravity/brain/d2707749-fdf4-4911-80c3-1b555f6164e4/dashboard_mockup_1765905052991.png)
 
-- **Core**: Python 3.12, Pandas, NumPy
-- **Machine Learning**: Scikit-Learn (TF-IDF, Cosine Similarity)
-- **Web**: Flask (Backend), HTML/CSS/JS (Frontend)
-- **Dataset**: MovieLens Small Dataset
+*The interface showcases transparent AI: users can see exactly how much growing genre interest (Content) vs. community trends (Collaborative) influenced each suggestion.*
 
-## Installation
+## 🚀 Key Features
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd hybrid-movie-recommender
-   ```
+*   **⚡ Hybrid Intelligence**: Merges **TF-IDF Genre Embeddings** with **User-User Collaborative Filtering** for robust, personalized top-N recommendations.
+*   **🔍 Explainable AI (XAI)**: A "Glass Box" approach. The dashboard visualizes the contribution of each model (Content vs. Collaborative) for every recommended movie.
+*   **🧠 Cold Start Handling**: Content-based fallback ensures recommendations even with sparse user interaction.
+*   **🎨 Premium UI**: A modern, dark-mode responsive dashboard built with Flask and Vanilla CSS.
 
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 🛠️ Tech Stack
 
-## Usage
+*   **Language**: Python 3.12
+*   **Data Processing**: Pandas, NumPy
+*   **Machine Learning**: Scikit-Learn (TF-IDF Vectorization, Cosine Similarity)
+*   **Backend**: Flask
+*   **Frontend**: HTML5, CSS3 (Custom Design System), JavaScript (ES6)
+*   **Dataset**: MovieLens Small (100k ratings, 9.7k movies)
 
-### Run the Web Interface
-Start the dashboard to interactively analyze users and see explainable recommendations.
+## 🏗️ Architecture
 
-```bash
-python app.py
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+1.  **Content-Based Engine**:
+    *   Constructs a **Genre Matrix** using TF-IDF.
+    *   Computes cosine similarity between a user's high-rated movies and the candidate pool.
+    *   *Addresses: "I like Action movies, find me more."*
 
-### Run CLI Verification
-Run the main script to verify the engine logic in the terminal.
+2.  **Collaborative Engine**:
+    *   Constructs a **User-Item Matrix**.
+    *   Finds k-nearest neighbors based on rating patterns.
+    *   Predicts ratings using weighted averages from similar users.
+    *   *Addresses: "People with taste like mine loved this."*
 
-```bash
-python main.py
-```
+3.  **Hybrid Blender**:
+    *   Normalizes scores from both engines.
+    *   Computes a weighted final score (configurable alpha).
 
-## How It Works
+## 🏁 Getting Started
 
-1. **Content-Based (The "Genre" Match)**:
-   - Uses TF-IDF to vectorize movie genres.
-   - Computes Cosine Similarity between a user's liked movies and all other movies.
-   - *Result*: Recommendation of movies with similar themes.
+### Prerequisites
+*   Python 3.10+
+*   pip
 
-2. **Collaborative Filtering (The "People" Match)**:
-   - Builds a User-Item rating matrix.
-   - Using Cosine Similarity, finds users with similar taste.
-   - Predicts ratings based on the weighted average of similar users' ratings.
-   - *Result*: Recommendation of movies liked by "people like you".
+### Installation
 
-3. **Hybrid Weighing**:
-   - The final score is a weighted sum (default 50/50) of both components, offering a balanced suggestion list.
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/hybrid-movie-recommender.git
+    cd hybrid-movie-recommender
+    ```
 
-## License
+2.  **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-MIT License. See [LICENSE](LICENSE) for details.
+3.  **Run the Application**
+    ```bash
+    python app.py
+    ```
+    The application will automatically download the MovieLens dataset on the first run.
+
+4.  **Explore**
+    Open your browser to `http://127.0.0.1:3000`.
+    *   Enter a **User ID** (e.g., `1`, `5`, or `10`) to analyze different user profiles.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+*Built for the Advanced AI Recommendation Systems Project 2025.*
