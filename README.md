@@ -9,7 +9,7 @@ A powerful, transparent movie recommendation system that combines the best of **
 
 ## 📸 Dashboard Demo
 
-![Dashboard Screenshot](file:///Users/tanishksarode/.gemini/antigravity/brain/d2707749-fdf4-4911-80c3-1b555f6164e4/dashboard_mockup_1765905052991.png)
+![Dashboard Screenshot](documents/images/dashboard.png)
 
 *The interface showcases transparent AI: users can see exactly how much growing genre interest (Content) vs. community trends (Collaborative) influenced each suggestion.*
 
