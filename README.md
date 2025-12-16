@@ -80,4 +80,7 @@ A powerful, transparent movie recommendation system that combines the best of **
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+**Tutorial Reference**: [Build a Hybrid Recommendation Engine](https://code2tutorial.com/tutorial/306061a9-f083-412d-b786-941257fd78b5/index.md)
+
 *Built for the Advanced AI Recommendation Systems Project 2025.*
