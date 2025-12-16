@@ -16,7 +16,7 @@ def main():
     # Test User
     test_user_id = 1
     
-    print(f"\n--- Recommendations for User {test_user_id} ---")
+    print(f"\n--- CineMatch AI Recommendations for User {test_user_id} ---")
     
     # Show user's history
     user_history = ratings[ratings['userId'] == test_user_id].merge(movies, on='movieId')

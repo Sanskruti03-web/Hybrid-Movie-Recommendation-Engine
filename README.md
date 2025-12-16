@@ -1,4 +1,5 @@
-# Hybrid Movie Recommendation Engine 🎬
+# CineMatch AI 🎬
+
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-3.0-green?style=for-the-badge&logo=flask&logoColor=white)
