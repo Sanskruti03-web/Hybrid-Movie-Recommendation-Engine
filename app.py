@@ -15,6 +15,7 @@ print("Recommender initialized.")
 @app.route('/')
 def index():
     return render_template('index.html')
+    
 
 @app.route('/api/recommendations/<int:user_id>')
 def get_recommendations(user_id):
